@@ -16,4 +16,4 @@
 
 <!--![首页](doc/home.jpeg)-->
 
-<img src="https://gitee.com/attacker/ldap-password/blob/master/doc/home.jpeg" width="60%">
+<img src="http://attacker.gitee.io/ldap-password/home.jpeg" width="30%">
