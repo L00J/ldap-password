@@ -41,4 +41,4 @@ python manage.py runserver 0.0.0.0:80
 
 <!--![首页](doc/home.jpeg)-->
 
-<img src="http://attacker.gitee.io/ldap-password/home.jpeg" width="60%">
+<img src="http://attacker.gitee.io/ldap-password/home.jpeg" width="80%">
