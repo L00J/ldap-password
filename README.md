@@ -13,7 +13,7 @@
 ### 安装教程
 **Docker部署**
 ```
-docker run --restart=always -d -p 8000:8080  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
+docker run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
 # LDAP_HOST是ldap服务器地址； LDAP_ADMIN_USER是manager账号; LDAP_PASSWORD是manager密码
 ```
 
