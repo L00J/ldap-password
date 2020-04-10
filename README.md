@@ -12,14 +12,14 @@
 ### 安装教程
 **Docker快速部署**
 ```
-docker  run -d -p 8000:8080  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
+docker   run   --restart=always -d -p 8000:8080  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
 # LDAP_HOST是ldap服务器地址； LDAP_ADMIN_USER是manager账号; LDAP_PASSWORD是manager密码
 ```
 
 **调试打印输出**
 `docker   -it  -p 8000:8080  -rm  ...省略` 
-```
-Django version 3.0.5, using settings 'website.settings'
+
+>Django version 3.0.5, using settings 'website.settings'
 Starting development server at http://0.0.0.0:8080/
 Quit the server with CONTROL-C.
 [10/Apr/2020 00:09:49] "GET / HTTP/1.1" 200 4824
@@ -27,11 +27,11 @@ LDAP connect success!
 [10/Apr/2020 00:09:58] "POST / HTTP/1.1" 200 18
 LDAP connect success!
 user: test modify passwd success
-```
+
 ### 本地部署
 ```
 git clone https://gitee.com/attacker/ldap-password.git
-ip install -i http://mirrors.aliyun.com/pypi/simple   --trusted-host mirrors.aliyun.com requirements.txt
+pip install -i http://mirrors.aliyun.com/pypi/simple   --trusted-host mirrors.aliyun.com requirements.txt
 
 python manage.py runserver 0.0.0.0:8000
 # 启动服务
