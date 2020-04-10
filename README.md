@@ -7,12 +7,13 @@
 ![Python](https://img.shields.io/badge/python-3.7-blue.svg?style=plastic)
 ![django](https://img.shields.io/badge/django-3.0.5-blue.svg?style=plastic)
 ![bootstrap](https://img.shields.io/badge/bootstrap-3.3.7-green.svg?style=plastic)
-![python-ldap](https://img.shields.io/badge/python_ldap-3.2.0-red.svg?style=plastic)
+![python-ldap](https://img.shields.io/badge/python_ldap-3.2.0-green.svg?style=plastic)
+![bootstrap](https://img.shields.io/badge/docker-19.03.2-orange.svg?style=plastic)
 
 ### 安装教程
-**Docker快速部署**
+**Docker部署**
 ```
-docker   run   --restart=always -d -p 8000:8080  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
+docker run --restart=always -d -p 8000:8080  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
 # LDAP_HOST是ldap服务器地址； LDAP_ADMIN_USER是manager账号; LDAP_PASSWORD是manager密码
 ```
 
@@ -26,7 +27,7 @@ Quit the server with CONTROL-C\
 LDAP connect success! \
 [10/Apr/2020 00:09:58] "POST / HTTP/1.1" 200 18\
 LDAP connect success!\
-user: test modify passwd success\
+user: test modify passwd success
 
 ### 本地部署
 ```
@@ -39,13 +40,13 @@ python manage.py runserver 0.0.0.0:8000
 
 ### 使用说明
 
+http://127.0.0.1:8000
 
 <!--![首页](doc/home.jpeg)-->
-
 <img src="http://attacker.gitee.io/ldap-password/home.jpeg" width="80%">
 
 <hr/>
 
-### QQ交流群
+扫码加入 **运维大本营**
 
 ![qq](doc/qq.png)

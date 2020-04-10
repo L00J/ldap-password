@@ -1,5 +1,5 @@
 FROM python:3.7-alpine
-MAINTAINER  by LJ <admin@attacker.club>
+MAINTAINER  by LJ <admin@attacker.club> Date:2020.04.10
 
 WORKDIR /home
 COPY . /home
@@ -13,4 +13,4 @@ CMD [ "python", "./manage.py", "runserver", "0.0.0.0:8000"]
 
 
 # docker build -t lghost/ldap-password:latest . # build images
-#
+# docker  run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
