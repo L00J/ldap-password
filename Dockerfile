@@ -8,7 +8,7 @@ RUN pip  install -i http://mirrors.aliyun.com/pypi/simple  --trusted-host mirror
 RUN apk del gcc libc-dev python-dev openldap-dev
 
 #  RUN  python manage.py makemigrations  &&  python manage.py migrate
-CMD [ "python", "./manage.py", "runserver", "0.0.0.0:8080"]
+CMD [ "python", "./manage.py", "runserver", "0.0.0.0:8000"]
 #CMD [ "/home/run"]
 
 

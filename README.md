@@ -17,10 +17,10 @@ docker   run   --restart=always -d -p 8000:8080  --env LDAP_HOST="192.168.1.250"
 ```
 
 **调试打印输出**
-`docker   -it  -p 8000:8080  -rm  ...省略` 
+`docker   -it  -p 8000:8000  -rm  ...省略` 
 
 >Django version 3.0.5, using settings 'website.settings' \
-Starting development server at http://0.0.0.0:8080/ \
+Starting development server at http://0.0.0.0:8000/ \
 Quit the server with CONTROL-C\
 [10/Apr/2020 00:09:49] "GET / HTTP/1.1" 200 4824\ 
 LDAP connect success! \
