@@ -1,15 +1,15 @@
 # ldap-password
 
-#### 介绍
+### 介绍
 自助修改ldap用户密码
 
-#### 环境
+### 环境
 ![Python](https://img.shields.io/badge/python-3.7-blue.svg?style=plastic)
 ![django](https://img.shields.io/badge/django-3.0.5-blue.svg?style=plastic)
 ![bootstrap](https://img.shields.io/badge/bootstrap-3.3.7-green.svg?style=plastic)
 ![python-ldap](https://img.shields.io/badge/python_ldap-3.2.0-red.svg?style=plastic)
 
-#### 安装教程
+### 安装教程
 **Docker快速部署**
 ```
 docker  run -d -p 8000:8080  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
@@ -28,16 +28,23 @@ LDAP connect success!
 LDAP connect success!
 user: test modify passwd success
 ```
-#### 本地部署
+### 本地部署
 ```
 git clone https://gitee.com/attacker/ldap-password.git
 ip install -i http://mirrors.aliyun.com/pypi/simple   --trusted-host mirrors.aliyun.com requirements.txt
-python manage.py runserver 0.0.0.0:80
+
+python manage.py runserver 0.0.0.0:8000
+# 启动服务
 ```
 
-#### 使用说明
+### 使用说明
 
 
 <!--![首页](doc/home.jpeg)-->
 
 <img src="http://attacker.gitee.io/ldap-password/home.jpeg" width="80%">
+
+<hr/>
+### QQ交流群
+
+![qq](doc/qq.png)
