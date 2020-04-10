@@ -28,9 +28,8 @@ LDAP connect success!
 LDAP connect success!
 user: test modify passwd success
 ```
-####
+#### 本地部署
 ```
-
 git clone https://gitee.com/attacker/ldap-password.git
 ip install -i http://mirrors.aliyun.com/pypi/simple   --trusted-host mirrors.aliyun.com requirements.txt
 python manage.py runserver 0.0.0.0:80
