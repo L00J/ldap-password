@@ -1,22 +1,15 @@
 # Created by .ignore support plugin (hsz.mobi)
 #.gitignore
-
 ### vscode IDEA
 .vscode
+
 ### IntelliJ IDEA
 .idea
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
-.idea/inspectionProfiles
-.idea/ldap-password.iml
 *.iws
 *.iml
 *.ipr
 Temp*
 RationalValues*
-
-
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
