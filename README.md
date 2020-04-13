@@ -2,7 +2,7 @@
  * @Author: 以谁为师
  * @Website: attacker.club
  * @Date: 2020-04-10 11:19:39
- * @LastEditTime: 2020-04-12 22:38:11
+ * @LastEditTime: 2020-04-13 14:39:07
  * @Description:
  -->
 
@@ -25,8 +25,9 @@
 **Docker 部署**
 
 ```
-docker run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD"    lghost/ldap-password:latest
-# LDAP_HOST是ldap服务器地址； LDAP_ADMIN_USER是manager账号; LDAP_PASSWORD是manager密码
+docker  run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD" --name ldap-password lghost/ldap-password:latest
+# LDAP_HOST 是 ldap 服务器地址； LDAP_ADMIN_USER 是 manager 账号; LDAP_PASSWORD 是 manager 密码
+
 ```
 
 **调试打印输出**
@@ -44,11 +45,14 @@ docker run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --
 ### 本地部署
 
 ```
+
 git clone https://gitee.com/attacker/ldap-password.git
-pip install -i http://mirrors.aliyun.com/pypi/simple   --trusted-host mirrors.aliyun.com requirements.txt
+pip install -i http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com requirements.txt
 
 python manage.py runserver 0.0.0.0:8000
+
 # 启动服务
+
 ```
 
 ### 使用说明
@@ -67,3 +71,7 @@ http://127.0.0.1:8000
 ## License
 
 项目基于 GPLv3 协议， 详细请参考 [LICENSE](LICENSE) 。
+
+```
+
+```
