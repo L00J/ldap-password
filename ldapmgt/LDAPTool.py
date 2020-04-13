@@ -10,6 +10,7 @@ import ldap
 import os
 import configparser
 
+
 config = configparser.ConfigParser()
 config.read('ldap.conf')
 config.sections()
