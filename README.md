@@ -1,16 +1,9 @@
-<!--
- * @Author: 以谁为师
- * @Website: attacker.club
- * @Date: 2020-04-10 11:19:39
- * @LastEditTime: 2020-04-13 14:39:07
- * @Description:
- -->
-
 # ldap-password
 
 ### 介绍
 
 自助修改 ldap 用户密码
+
 
 ### 环境
 
@@ -26,7 +19,7 @@
 
 ```
 docker  run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD" --name ldap-password lghost/ldap-password:latest
-# LDAP_HOST 是 ldap 服务器地址； LDAP_ADMIN_USER 是 manager 账号; LDAP_PASSWORD 是 manager 密码
+# Use the Manager account
 
 ```
 
