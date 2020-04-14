@@ -1,7 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 #.gitignore
 ### vscode IDEA
-.vscode
+.vscode/
+env_django/
+env/
 
 ### IntelliJ IDEA
 .idea
@@ -13,8 +15,7 @@ RationalValues*
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*$py.class
+.class
 
 # C extensions
 *.so
@@ -134,5 +135,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-
