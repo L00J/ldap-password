@@ -23,6 +23,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
+        apt-get install libldap2-dev libsasl2-dev
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Tests
