@@ -71,7 +71,3 @@ http://127.0.0.1:8000
 ## License
 
 项目基于 GPLv3 协议， 详细请参考 [LICENSE](LICENSE) 。
-
-```
-
-```
