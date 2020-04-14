@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<!--
- * @Author: 以谁为师
- * @Website: attacker.club
- * @Date: 2020-04-10 11:19:39
- * @LastEditTime: 2020-04-15 00:13:06
- * @Description:
- -->
-
-=======
->>>>>>> 645bd88c978f893fc82fb51359fce88753e23575
 # ldap-password
 
 ## 介绍
@@ -28,17 +17,11 @@
 
 Docker 部署
 
+
+
 ```shell
-
-docker run --restart=always -d -p 8000:8000 --env LDAP_HOST="192.168.1.250" --env LDAP_ADMIN_USER="root.ops.net" --env LDAP_PASSWORD="PASSWD" --name ldap-password lghost/ldap-password:latest
-
-<<<<<<< HEAD
-# LDAP_HOST 是 ldap 服务器地址； LDAP_ADMIN_USER 是 manager 账号; LDAP_PASSWORD 是 manager 密码
-=======
-```
 docker  run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD" --name ldap-password lghost/ldap-password:latest
 # Use the Manager account
->>>>>>> 645bd88c978f893fc82fb51359fce88753e23575
 
 ```
 
