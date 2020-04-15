@@ -1,13 +1,20 @@
+<!--
+ * @Author: 以谁为师
+ * @Website: attacker.club
+ * @Date: 2020-04-15 00:47:42
+ * @LastEditTime: 2020-04-15 08:00:11
+ * @Description:
+ -->
+
 # ldap-password
 
 ## 介绍
 
 自助修改 ldap 用户密码
 
-
 ### 环境
 
-![Python](https://img.shields.io/badge/python-3.7-blue.svg?style=plastic)
+![Python](https://img.shields.io/badge/python-3.6+-blue.svg?style=plastic)
 ![django](https://img.shields.io/badge/django-3.0.5-blue.svg?style=plastic)
 ![bootstrap](https://img.shields.io/badge/bootstrap-3.3.7-green.svg?style=plastic)
 ![python-ldap](https://img.shields.io/badge/python_ldap-3.2.0-green.svg?style=plastic)
@@ -17,8 +24,6 @@
 ### 安装教程
 
 Docker 部署
-
-
 
 ```shell
 docker  run --restart=always -d -p 8000:8000  --env LDAP_HOST="192.168.1.250"  --env LDAP_ADMIN_USER="root.ops.net"  --env LDAP_PASSWORD="PASSWD" --name ldap-password lghost/ldap-password:latest
@@ -68,6 +73,3 @@ python manage.py runserver 0.0.0.0:8000
 ## License
 
 项目基于 GPLv3 协议， 详细请参考 [LICENSE](LICENSE) 。
-
-
-
