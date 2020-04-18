@@ -2,7 +2,7 @@
  * @Author: 以谁为师
  * @Website: attacker.club
  * @Date: 2020-04-15 00:47:42
- * @LastEditTime: 2020-04-15 08:00:11
+ * @LastEditTime: 2020-04-18 11:59:54
  * @Description:
  -->
 
@@ -54,6 +54,17 @@ python manage.py runserver 0.0.0.0:8000
 
 # 启动服务
 
+```
+
+### 文件配置
+
+ldap.conf
+
+```config
+[ldap]
+LDAP_HOST=root.ops.net
+LDAP_ADMIN_USER=root.ops.net
+LDAP_PASSWORD=xxxxxxx
 ```
 
 ### 使用说明

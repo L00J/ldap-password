@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>self-service</title>
+
+    <link rel="shortcut icon" href=static/favicon.ico /> 
+    <!-- ico图标 -->
+    <link rel="stylesheet" href="/static/fontawesome-free-5.11.2-web/css/all.css">
+    <!-- Font Awesome 图标-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"  type="text/css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+   <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <!--  jquery -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+ 
+
+
+    <style>
+       html, body {
+         background: url("static/unsplash-space.jpeg") no-repeat center fixed;
+         background-size: cover;
+       }
+    </style>
+
+</head>
+
+
+
+
+<body style>
+
+<div class="container">
+<br><br>
+
+<div class="panel panel-success">
+<div class="panel-body">
+
+
+    <div class="navbar-wrapper">
+
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-collapse collapse" style="height: 1px;">
+              <ul class="nav navbar-nav">
+                <li>
+                    <a href="/"><i class="fa fa-fw fa-home"></i> 自助LDAP密码修改</a>
+                </li>
+
+
+<!--
+                <li>
+                  <a href="?action=sendtoken" data-toggle="menu-popover" data-content="通过邮件发送密码重置链接" data-original-title="" title=""><i class="fa fa-fw fa-envelope"></i> 邮件</a>
+                </li>
+-->
+
+            </ul>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+
+<a href="/" alt="Home">
+<img width="5%" src="static/whale.png"  alt="Logo" class="logo img-responsive center-block">
+</a>
+
+<div class="result alert alert-success">
+<p><i class="fa fa-fw fa-check-square" aria-hidden="true"></i> 修改您的密码</p>
+</div>
+
+<div class="help alert alert-warning">
+<p><i class="fa fa-fw fa-info-circle"></i> 输入您的旧密码并设置新密码.</p>
+</div>
+
+
+<div class="alert alert-info">
+<form action="/" method="post" class="form-horizontal">
+
+       {% csrf_token %}
+
+
+    <div class="form-group">
+        <label for="login" class="col-sm-5 control-label">用户名</label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span>
+                <input type="text" name="username" id="login"   placeholder="用户名">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="oldpassword" class="col-sm-5 control-label">旧密码</label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
+                <input type="password" name="oldpassword" id="oldpassword" placeholder="旧密码">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="newpassword" class="col-sm-5 control-label">新密码</label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
+                <input type="password" name="newpassword" id="newpassword"  placeholder="新密码" >
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="confirmpassword" class="col-sm-5 control-label"> 重复输入</label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
+                <input type="password" name="confirmpassword" id="confirmpassword"  placeholder="重复输入" onblur="check()">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-5">
+            <button type="submit" class="btn btn-success" >
+                {% comment %} <i class="fa fa-fw fa-check-square-o"></i> 提交 </button> {% endcomment %}
+                <i class="fa fa-fw fa-check-square"></i> 提交 </button>
+        </div>
+    </div>
+</form>
+</div>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+    //自定义通过ID获取元素的函数
+    function $(id) {
+        return document.getElementById(id)
+    }
+
+    function check() {
+        var boo = $('newpassword').value == $('confirmpassword').value;
+        if (boo) {
+            return true;
+        } else {
+            alert('两次密码不一致')
+        }
+    }
+</script>
+
+
+<footer>
+    <br>
+    <div class="foot-nav navbar-fixed-boottome">
+        <div class="text-center">
+            <span>CopyRight © 2020   &nbsp;<a href="http://attacker.club">以谁为师</a>&nbsp;&nbsp;Powered by Django</span>
+        </div>
+    </div>
+    <br>
+</footer>
+
+</body>
+</html>

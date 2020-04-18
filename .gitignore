@@ -10,7 +10,6 @@ env/
 *.iws
 *.iml
 *.ipr
-Temp*
 RationalValues*
 ### Python template
 # Byte-compiled / optimized / DLL files
